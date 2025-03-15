@@ -13,24 +13,6 @@ This repository contains two versions of a mathematical modeling project optimiz
 
 ## Requirements
 - LaTeX distribution (e.g., TeX Live, MiKTeX) with packages: `amsmath`, `amssymb`, `graphicx`, `booktabs`, `geometry`, `tikz`.
-- Optional: Python/Matplotlib for alternative figure generation (see below).
-- # sensitivity_plot.py
-import matplotlib.pyplot as plt
-import numpy as np
-
-C_h = np.linspace(0, 100000, 100)
-Z_2 = 2 * C_h + 94750
-Z_3 = 3 * C_h + 73050
-
-plt.plot(C_h, Z_2, 'b-', label='Two Hubs (GB, SB)')
-plt.plot(C_h, Z_3, 'r-', label='Three Hubs (GB, SB, F)')
-plt.axvline(21700, color='k', linestyle='--', label='Threshold: $C_h = 21,700$')
-plt.xlabel('Fixed Hub Cost $C_h$ (dollars/day)')
-plt.ylabel('Total Cost $Z$ (dollars/day)')
-plt.legend()
-plt.grid(True)
-plt.savefig('sensitivity.png')
-plt.show()
 
 ## Compilation
 1. Clone the repository:
